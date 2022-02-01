@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1631626061816,
-  "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
+  "lastUpdate": 1643727691421,
+  "repoUrl": "https://github.com/Zachinquarantine/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "jochembrouwer96@gmail.com",
-            "name": "Jochem Brouwer",
-            "username": "jochem-brouwer"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "cbcb7ac5893f691c436412d99f3f9fd72e0d9664",
-          "message": "Client: keep syncing at tip of chain (#1132)\n\n* client: fullsync: keep syncing at tip of chain\r\n\r\n* client -> tip of the chain: extract new block handler addition to dedicated method, expand to light sync\r\n\r\n* client -> tip of the chain: aligned NewBlockHashes message trigger with other ETH messages, consolidated with existing announced method\r\n\r\n* client -> tip of the chain: moved synchronized property to config, more fine grained sync and re-sync handling (including target height comparison)\r\n\r\n* client -> tip of the chain: reset synchronization status after SYNCED_STATE_REMOVAL_PERIOD seconds with no chain updates\r\n\r\n* update client.synchronized to client.config.synchronized\r\n\r\n* tidy up handleNewBlockHashes code\r\n\r\n* add resolve and reject conditions to syncWithPeer, fix tests\r\n\r\n* clean up interval use, stops memory leak\r\n\r\n* remove redundant test now that synchronized property moved from EthereumClient to config\r\n\r\n* emit event to finish sync\r\n\r\n* to help finish integration tests, if syncTargetHeight is not available, get latest block number from status msg\r\n\r\n* implement newly added abstract method to SynchronizerTest to fix ts compile error\r\n\r\n* fix promise that was throwing due to undefined\r\n\r\n* client: align destroyWhenDone and destroyOnFinish naming in Fetcher\r\n\r\n* client: switched from blocks to headers height in Synchronizer CHAIN_UPDATED handling to also work for light clients\r\n\r\n* client: use best peer status height for a first sync target height\r\n\r\n* client: unify full and light sync() method in Synchronizer\r\n\r\n* client: update sync state if no peer with a higher status height than on local DB is found\r\n\r\n* client: fixed sync unit test\r\n\r\n* client: comment out sync status update on stale peer connections (needs test fixes before activation)\r\n\r\n* client: comment out whole sync reconnection logic until tests are fixed\r\n\r\n* client: make full sync integration tests more robust\r\n\r\nCo-authored-by: holgerd77 <Holger.Drewes@gmail.com>\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
-          "timestamp": "2021-08-20T15:55:57+02:00",
-          "tree_id": "600204f88d3db6fbfc632aec7c6bb797e53f720c",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/cbcb7ac5893f691c436412d99f3f9fd72e0d9664"
-        },
-        "date": 1629468265817,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 13260,
-            "range": "±10.91%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 12633,
-            "range": "±14.47%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 14571,
-            "range": "±3.04%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 13789,
-            "range": "±3.26%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 8372,
-            "range": "±21.23%",
-            "unit": "ops/sec",
-            "extra": "40 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 859,
-            "range": "±28.25%",
-            "unit": "ops/sec",
-            "extra": "57 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 160,
-            "range": "±65.37%",
-            "unit": "ops/sec",
-            "extra": "51 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 132,
-            "range": "±6.98%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 18.55,
-            "range": "±89.23%",
-            "unit": "ops/sec",
-            "extra": "18 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±117.21%",
             "unit": "ops/sec",
             "extra": "16 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "17355484+acolytec3@users.noreply.github.com",
+            "name": "acolytec3",
+            "username": "acolytec3"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b22424783fd538af0644d5e93d783871943be5e1",
+          "message": "vm: skip `_runStepHook` method if no step event listener (#1676)\n\nCo-authored-by: Holger Drewes <Holger.Drewes@gmail.com>",
+          "timestamp": "2022-02-01T15:00:30+01:00",
+          "tree_id": "01c402171904c05532d585a919f7217ae2badfae",
+          "url": "https://github.com/Zachinquarantine/ethereumjs-monorepo/commit/b22424783fd538af0644d5e93d783871943be5e1"
+        },
+        "date": 1643727690853,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14343,
+            "range": "±14.15%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 12681,
+            "range": "±16.59%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15955,
+            "range": "±1.53%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 12072,
+            "range": "±14.37%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 5127,
+            "range": "±12.87%",
+            "unit": "ops/sec",
+            "extra": "48 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 876,
+            "range": "±7.27%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 172,
+            "range": "±12.15%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 18.89,
+            "range": "±168.69%",
+            "unit": "ops/sec",
+            "extra": "16 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 16.14,
+            "range": "±16.31%",
+            "unit": "ops/sec",
+            "extra": "32 samples"
           }
         ]
       }
