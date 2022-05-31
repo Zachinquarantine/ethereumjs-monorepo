@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643727691421,
+  "lastUpdate": 1654036566990,
   "repoUrl": "https://github.com/Zachinquarantine/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "17355484+acolytec3@users.noreply.github.com",
-            "name": "acolytec3",
-            "username": "acolytec3"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "c63ab7fa711851395ecb53d4f6c137dc5eaa6fc4",
-          "message": "client: missing headers/bodies message to debug level (#1415)",
-          "timestamp": "2021-08-20T14:34:15-04:00",
-          "tree_id": "e6517c96b0c2d297e7e68bdd80bc5d10c837ee1f",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/c63ab7fa711851395ecb53d4f6c137dc5eaa6fc4"
-        },
-        "date": 1629484752576,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 15879,
-            "range": "±13.92%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 18487,
-            "range": "±1.19%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 16496,
-            "range": "±1.90%",
-            "unit": "ops/sec",
-            "extra": "70 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 14710,
-            "range": "±2.58%",
-            "unit": "ops/sec",
-            "extra": "67 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 5759,
-            "range": "±19.18%",
-            "unit": "ops/sec",
-            "extra": "37 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1042,
-            "range": "±9.47%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 132,
-            "range": "±86.63%",
-            "unit": "ops/sec",
-            "extra": "50 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 121,
-            "range": "±8.25%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 9.58,
-            "range": "±122.03%",
-            "unit": "ops/sec",
-            "extra": "27 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±16.31%",
             "unit": "ops/sec",
             "extra": "32 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ernestognw@gmail.com",
+            "name": "Ernesto García",
+            "username": "ernestognw"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "30ca12e6e38d107aa80e0b626078a345ff0f06f2",
+          "message": "Util: Allow `v` to be `0` or `1` for EIP1559 transactions (#1905)\n\n* Util: Allow v to be `0` or `1` for EIP1559 transactions\r\n\r\n* vm: fix ecrecover precompile for v=0 and v=1\r\n\r\n* tx/legacyTransaction: add `v` guard for non-EIP155 txs\r\n\r\n* tx: switch to earlier v validation and throwing before v common/EIP-155 determination logic\r\n\r\n* tx: remove v==0 check which always defaults to the default common\r\n\r\nCo-authored-by: Jochem Brouwer <jochembrouwer96@gmail.com>\r\nCo-authored-by: Holger Drewes <Holger.Drewes@gmail.com>",
+          "timestamp": "2022-05-31T19:54:41+02:00",
+          "tree_id": "925f79a30206c16ad2a48f8ed17e6f5a001fc0c1",
+          "url": "https://github.com/Zachinquarantine/ethereumjs-monorepo/commit/30ca12e6e38d107aa80e0b626078a345ff0f06f2"
+        },
+        "date": 1654036565967,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 10268,
+            "range": "±14.97%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 11863,
+            "range": "±3.06%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 7344,
+            "range": "±26.12%",
+            "unit": "ops/sec",
+            "extra": "47 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 11696,
+            "range": "±3.47%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 13152,
+            "range": "±3.97%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 691,
+            "range": "±7.80%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 143,
+            "range": "±13.18%",
+            "unit": "ops/sec",
+            "extra": "56 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 34.22,
+            "range": "±107.79%",
+            "unit": "ops/sec",
+            "extra": "34 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 14.11,
+            "range": "±8.28%",
+            "unit": "ops/sec",
+            "extra": "31 samples"
           }
         ]
       }
